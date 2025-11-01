@@ -1,0 +1,29 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bobcho101/Library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bobcho101/Library/issues"
+  },
+  "homepage": "https://github.com/Bobcho101/Library#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.19.2"
+  }
+}
