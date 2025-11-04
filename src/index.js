@@ -32,7 +32,7 @@ app.use(express.static('src/public'))
 
 
 app.get('/', (req, res) => {
-    res.send("hi")
+    res.render('home')
 })
 // app.use(authMiddleware);
 // app.use(routes);
