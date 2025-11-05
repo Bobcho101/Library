@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/images/icon.png">
 </head>
 <body>
+     <header>
+        <div class="container nav">
+        <h1><a href="/">📚 Library</a></h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/books">Books</a>
+            <a href="/add-book">Add Book</a>
+        </nav>
+        </div>
+    </header>
+
     <main>
         {{{body}}}
     </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+            <h3>📚 MyLibrary</h3>
+            <p>
+                MyLibrary is your digital reading companion — discover, manage, 
+                and enjoy books anytime, anywhere.
+            </p>
+            </div>
+
+            <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/books">Books</a></li>
+                <li><a href="/add-book">Add Book</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>Email: support@mylibrary.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; {{year}} MyLibrary. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
