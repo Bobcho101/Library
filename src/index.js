@@ -1,5 +1,5 @@
 import express from 'express';
-// import routes from './routes.js';
+import routes from './routes.js';
 import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
 import handlebars from 'express-handlebars';
@@ -31,10 +31,7 @@ app.use(express.static('src/public'))
 // }
 
 
-app.get('/', (req, res) => {
-    res.render('home')
-})
 // app.use(authMiddleware);
-// app.use(routes);
+app.use(routes);
 
 app.listen(PORT, console.log(`http://localhost:${PORT}`));
