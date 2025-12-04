@@ -130,6 +130,7 @@ footer {
     width: 100%;
     
 }
+
 main {
    display: flex;
   flex-direction: column;
@@ -137,9 +138,9 @@ main {
 }
 
 .footer-container {
-  width: 90%;
+  width: 30%;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 10%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2.5rem;
@@ -163,11 +164,13 @@ main {
   color: #00b4d8;
   margin-bottom: 1rem;
   font-size: 1.1rem;
+  text-align: end;
 }
 
 .footer-links ul {
   list-style: none;
   padding: 0;
+  text-align: end;
 }
 
 .footer-links li {
