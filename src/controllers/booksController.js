@@ -7,7 +7,7 @@ booksController.get('/books', async (req, res) => {
     const books = await getBooks();
     console.log(books);
     
-    return res.render('catalog');
+    return res.render('catalog', { books });
 });
 
 export default booksController;
