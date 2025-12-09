@@ -6,6 +6,7 @@ import handlebars from 'express-handlebars';
 // import { authMiddleware } from './middlewares/auth-middleware.js';
 const app = express();
 const PORT = 3000;
+const mongoUri = 'mongodb://127.0.0.1:27017/Library';
 
 
 app.engine('hbs', handlebars.engine({
@@ -23,12 +24,12 @@ app.use(cookieParser());
 app.use(express.static('src/public'))
 
 
-// try{
-//     const localUri = mongoUri;
-//     await mongoose.connect(localUri);
-// } catch(err){
-//     console.log(err.message);
-// }
+try{
+    const localUri = mongoUri;
+    await mongoose.connect(localUri);
+} catch(err){
+    console.log(err.message);
+}
 
 
 // app.use(authMiddleware);
