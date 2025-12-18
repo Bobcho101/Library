@@ -458,6 +458,79 @@ main {
 }
 
 
+/*create*/
+
+.form-hero {
+  background: radial-gradient(circle at top left, #1e293b, #0f172a 70%);
+  color: #f8fafc;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.form-hero h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.form-hero h2 span {
+  color: #00b4d8;
+}
+
+.form-hero p {
+  color: #cbd5e1;
+  margin-top: 0.5rem;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.book-form {
+  background: #1e293b;
+  padding: 2.5rem;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.4rem;
+}
+
+.form-group label {
+  color: #e5e7eb;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+
+.form-group input:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 0 2px rgba(0,180,216,0.2);
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 1rem;
+}
+
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {

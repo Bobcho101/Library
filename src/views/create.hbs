@@ -1,0 +1,28 @@
+<section class="form-hero">
+  <h2><span>Добави</span> нова книга</h2>
+  <p>Попълни информацията за книгата в каталога</p>
+</section>
+
+<section class="form-wrapper">
+  <form action="/add-book" method="POST" class="book-form">
+    
+    <div class="form-group">
+      <label for="bookName">Заглавие</label>
+      <input type="text" id="bookName" name="bookName" placeholder="Въведи заглавие" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bookAuthor">Автор</label>
+      <input type="text" id="bookAuthor" name="bookAuthor" placeholder="Въведи автор" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bookImage">Снимка (URL)</label>
+      <input type="url" id="bookImage" name="bookImage" placeholder="https://..." required>
+    </div>
+
+    <button type="submit" class="btn-primary full-width">
+      ➕ Добави книга
+    </button>
+  </form>
+</section>
