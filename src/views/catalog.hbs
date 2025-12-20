@@ -3,21 +3,21 @@
 </section>
 
 <section class="catalog-grid">
-    <div class="catalog-card">
-        <img src="/images/test.jpg" alt="Снимка на книгата">
-        <h4>Заглавие на книга</h4>
-        <p>Автор на книга</p>
-        <a href="#" class="btn-small">Детайли</a>
-    </div>
-
     {{#each books}}
        <div class="catalog-card">
-            <img src="{{this.bookImage}}" alt="Снимка на книгата">
+          <img src="{{this.bookImage}}" alt="Снимка на книгата">
             <h4>{{this.bookName}}</h4>
             <p>{{this.bookAuthor}}</p>
-            <a href="/books/{{this._id}}" class="btn-small">Детайли</a>
-        </div>
+            <a href="/books/{{this._id}}" class="btn-small">Детайли</a>  
+      </div>
     {{/each}}
+
+    <div class="catalog-card">
+      <img src="/images/test.jpg" alt="Снимка на книгата">
+      <h4>Заглавие на книга</h4>
+      <p>Автор на книга</p>
+      <a href="#" class="btn-small">Детайли</a> 
+    </div>
 
   {{!-- <div class="catalog-card">
     <img src="/images/test.jpg" alt="Book 2">

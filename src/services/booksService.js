@@ -9,5 +9,5 @@ export async function createBook(formData) {
 }
 
 export async function getOneBook(id) {
-    return await Book.findById(id)
+    return await Book.findById(id);
 }
