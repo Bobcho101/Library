@@ -1,17 +1,19 @@
 import { Router } from 'express';
-import { createBook, getBooks } from '../services/booksService.js';
+import { createBook, getBooks, getOneBook } from '../services/booksService.js';
 
 
 const booksController = Router();
 
 booksController.get('/books', async (req, res) => {
-    const books = await getBooks();
-
-    return res.render('catalog', { books });
+    try{
+        const books = await getBooks();
+        return res.render('catalog', { books });
+    } catch(err){
+        console.log(err.message);
+    }
 });
 
 booksController.get('/add-book', async (req, res) => {      
-
     return res.render('create');
 });
 
@@ -20,12 +22,25 @@ booksController.post('/add-book', async (req, res) => {
     try{
         formData.bookStatus = "свободна";
         await createBook(formData);
+        return res.redirect("/books");
     } catch(err){
         console.log(err.message);
     }
-    return res.redirect("/books");
 });
 
+booksController.get('/books/:id', async (req, res) => {
+    try{
+        const id = req.params.id;
+        const currentBook = await getOneBook(id);
+        console.log(currentBook);
+        
 
+        return res.render('details', { currentBook });  
+    } catch(err){
+        console.log(err.message);
+    }
+   
+       
+});
 
 export default booksController;

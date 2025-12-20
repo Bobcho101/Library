@@ -1,0 +1,28 @@
+<section class="details-hero">
+  <h2>Детайли за <span>книгата</span></h2>
+</section>
+
+<section class="details-wrapper">
+  <div class="details-card">
+
+    <div class="details-image">
+      <img src="{{currentBook.bookImage}}" alt="{{currentBook.bookName}}">
+    </div>
+
+    <div class="details-info">
+      <h3>{{currentBook.bookName}}</h3>
+      <p class="author">{{currentBook.bookAuthor}}</p>
+
+      <div class="status">
+        <span>Статус:</span>
+        <span class="badge свободна">{{currentBook.bookStatus}}</span>
+      </div>
+
+      <div class="details-actions">
+        <a href="/books/{{currentBook._id}}/edit" class="btn-small">Редактирай</a>
+        <a href="/books/{{currentBook._id}}/delete" class="btn-small danger">Изтрий</a>
+      </div>
+    </div>
+
+  </div>
+</section>
