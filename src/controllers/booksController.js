@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createBook, getBooks, getOneBook } from '../services/booksService.js';
+import { createBook, deleteBook, getBooks, getOneBook } from '../services/booksService.js';
 
 
 const booksController = Router();
@@ -39,8 +39,17 @@ booksController.get('/books/:id', async (req, res) => {
     } catch(err){
         console.log(err.message);
     }
-   
-       
 });
+
+booksController.get('/books/:id/delete', async (req, res) => {
+    try{
+        const id = req.params.id;
+        await deleteBook(id);
+        return res.redirect('/books');
+    } catch(err){
+        console.log(err.message);
+    }
+});
+
 
 export default booksController;
