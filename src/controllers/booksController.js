@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { createBook, getBooks } from '../services/booksService.js';
-import Book from '../models/BooksModel.js';
+
 
 const booksController = Router();
 
@@ -15,7 +15,6 @@ booksController.get('/add-book', async (req, res) => {
     return res.render('create');
 });
 
-
 booksController.post('/add-book', async (req, res) => {
     const formData = req.body;
     try{
@@ -26,5 +25,7 @@ booksController.post('/add-book', async (req, res) => {
     }
     return res.redirect("/books");
 });
+
+
 
 export default booksController;
