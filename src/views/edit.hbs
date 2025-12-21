@@ -1,0 +1,58 @@
+<section class="form-hero">
+  <h2>Редактирай <span>книга</span></h2>
+  <p>Промени информацията за избраната книга</p>
+</section>
+
+<section class="form-wrapper">
+  <form class="book-form" action="/books/{{currentBook._id}}/edit" method="POST">
+
+    <div class="form-group">
+      <label for="bookName">Заглавие</label>
+      <input
+        type="text"
+        id="bookName"
+        name="bookName"
+        value="{{currentBook.bookName}}"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="bookAuthor">Автор</label>
+      <input
+        type="text"
+        id="bookAuthor"
+        name="bookAuthor"
+        value="{{currentBook.bookAuthor}}"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="bookImage">Снимка (URL)</label>
+      <input
+        type="text"
+        id="bookImage"
+        name="bookImage"
+        value="{{currentBook.bookImage}}"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="bookStatus">Статус</label>
+      <select id="bookStatus" name="bookStatus" required>
+        <option value="свободна" {{#if (eq currentBook.bookStatus "свободна")}}selected{{/if}}>Свободна</option>
+        <option value="заета" {{#if (eq currentBook.bookStatus "заета")}}selected{{/if}}>Заета</option>
+        <option value="изгубена" {{#if (eq currentBook.bookStatus "изгубена")}}selected{{/if}}>Изгубена</option>
+        <option value="повредена" {{#if (eq currentBook.bookStatus "повредена")}}selected{{/if}}>Повредена</option>
+      </select>
+    </div>
+
+    <div class="edit-actions">
+      <button type="submit" class="btn-small">Запази</button>
+      <a href="/books/{{currentBook._id}}" class="btn-small cancel">Отказ</a>
+    </div>
+
+  </form>
+</section>

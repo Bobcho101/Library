@@ -634,6 +634,44 @@ main {
   background: #f87171;
 }
 
+.edit-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.edit-actions .cancel {
+  background: #334155;
+  color: #e5e7eb;
+}
+
+.edit-actions .cancel:hover {
+  background: #475569;
+}
+
+/* Select styling */
+.form-group select {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group select:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 0 2px rgba(0,180,216,0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .edit-actions {
+    flex-direction: column;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .details-card {
