@@ -11,6 +11,9 @@ const mongoUri = 'mongodb://127.0.0.1:27017/Library';
 
 app.engine('hbs', handlebars.engine({
     extname: 'hbs',
+    helpers: {
+        eq: (a, b) => a === b
+    },
     runtimeOptions: {
         allowProtoPropertiesByDefault: true
     }

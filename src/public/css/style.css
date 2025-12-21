@@ -600,9 +600,10 @@ main {
   text-transform: capitalize;
 }
 
-.badge.свободна {
-  background: #22c55e;
-  color: #052e16;
+.badge {
+  color: white;
+  font-style: oblique;
+  font-size: 1.1em;
 }
 
 .badge.заета {
