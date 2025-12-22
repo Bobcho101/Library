@@ -6,7 +6,9 @@ import handlebars from 'express-handlebars';
 // import { authMiddleware } from './middlewares/auth-middleware.js';
 const app = express();
 const PORT = 3000;
-const mongoUri = 'mongodb://127.0.0.1:27017/Library';
+// const mongoUri = 'mongodb://127.0.0.1:27017/Library';
+const mongoUri = 'mongodb+srv://bgbobi878:nF1xmfzLcd5NP1YU@cluster0.gtyux.mongodb.net/Library?retryWrites=true&w=majority';
+
 
 
 app.engine('hbs', handlebars.engine({
@@ -28,8 +30,13 @@ app.use(express.static('src/public'))
 
 
 try{
-    const localUri = mongoUri;
-    await mongoose.connect(localUri);
+    const globalUri = mongoUri;
+    try{
+        await mongoose.connect(globalUri);  
+    } catch(err){
+        console.log(err.message);  
+    }
+    
 } catch(err){
     console.log(err.message);
 }
